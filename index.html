@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wedding Invitation</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;600&family=Great+Vibes&family=Marcellus&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --ink:#4a3a2a;
+  --soft:#d2c0a3;
+  --cover:#e6dccf;
+  --paper:#ffffff;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+  background:#efe9e1;
+  font-family:'Libre Caslon Text',serif;
+  color:var(--ink);
+}
+
+/* BOOK */
+.book-wrapper{
+  max-width:420px;
+  margin:40px auto;
+  perspective:1400px;
+}
+
+.book{position:relative;}
+
+/* COVER */
+.cover{
+  position:absolute;
+  inset:0;
+  background:var(--cover);
+  border-radius:14px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  transform-origin:left;
+  animation:openBook 3.5s ease forwards;
+  z-index:3;
+}
+
+@keyframes openBook{
+  to{transform:rotateY(-160deg);}
+}
+
+.cover .om-symbol{
+  font-family:'Marcellus',serif;
+  font-size:56px;
+}
+
+/* PAGE */
+.page{
+  background:var(--paper);
+  border-radius:14px;
+  padding:26px 20px 32px;
+  box-shadow:0 12px 35px rgba(0,0,0,.2);
+}
+
+/* COMMON */
+.center{text-align:center;}
+
+.divider{
+  width:80%;
+  margin:18px auto;
+  border-top:1px solid var(--soft);
+}
+
+/* TEXT */
+.om-center,
+.parents,
+.venue h3,
+.reception h4{
+  font-family:'Marcellus',serif;
+}
+
+.om-center{font-size:32px;margin-bottom:8px;}
+.parents{font-size:18px;}
+
+.address{
+  font-size:14px;
+  line-height:1.7;
+}
+
+.invite{
+  margin:18px 0;
+  font-size:15px;
+}
+
+/* NAMES */
+.name{
+  font-family:'Great Vibes',cursive;
+  font-size:38px;
+}
+
+.with{margin:6px 0;}
+
+/* PHOTO */
+.couple-frame{
+  margin:18px auto;
+  width:120px;
+  height:120px;
+  border-radius:50%;
+  padding:6px;
+  background:radial-gradient(circle,#f4d7d7,#d9b8b8);
+  position:relative;
+}
+
+.couple-frame::after{
+  content:'❤';
+  position:absolute;
+  bottom:-10px;
+  right:-8px;
+  font-size:22px;
+  color:#b66;
+}
+
+.couple-frame img{
+  width:100%;
+  height:100%;
+  border-radius:50%;
+  object-fit:cover;
+}
+
+/* ICON ALIGNMENT */
+.icon{
+  width:22px;
+  height:22px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  vertical-align:middle;
+}
+
+.icon svg{
+  width:100%;
+  height:100%;
+  stroke:var(--ink);
+  stroke-width:1.8;
+  fill:none;
+}
+
+/* DETAILS */
+.details{
+  display:flex;
+  gap:12px;
+  font-size:14px;
+}
+
+.box{
+  flex:1;
+  text-align:center;
+}
+
+.box strong{
+  display:block;
+  margin-top:4px;
+}
+
+/* VENUE */
+.venue h3{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  font-size:18px;
+}
+
+.venue p{
+  font-size:14px;
+  margin-top:4px;
+}
+
+.sweek{
+  font-style:italic;
+  margin-top:10px;
+}
+
+/* RECEPTION */
+.reception h4{
+  font-size:16px;
+  margin-bottom:6px;
+}
+
+.reception p{
+  font-size:14px;
+  line-height:1.5;
+}
+
+/* FOOTER */
+.footer{
+  margin-top:18px;
+  font-size:13px;
+  font-style:italic;
+}
+</style>
+</head>
+
+<body>
+
+<div class="book-wrapper">
+  <div class="book">
+
+    <div class="cover">
+      <div class="om-symbol">ॐ</div>
+    </div>
+
+    <div class="page">
+
+      <div class="center om-center">ॐ</div>
+
+      <div class="center parents">
+        Chandran K & Nalini Chandran
+      </div>
+
+      <div class="center address">
+        Revathy, Lekshmi Nagar, H-6, Pattom P.O<br>
+        Thiruvananthapuram<br>
+        Mob : 9495486580
+      </div>
+
+      <div class="center invite">
+        We cordially invite your esteemed presence and blessings with family
+        on the auspicious occasion of the marriage of our son
+      </div>
+
+      <div class="center">
+        <div class="name">Girish Chandran</div>
+        <div class="with">with</div>
+        <div class="name">Nitha Sidharthan</div>
+      </div>
+
+      <div class="couple-frame">
+        <img src="./images/invitation.jpg.jpeg" alt="Couple Photo">
+      </div>
+
+      <div class="center address">
+        D/o Mr. Sidharthan & Mrs. Baby Sidharthan<br>
+        Eranapilly (H), Konathukunnu P.O, Chilanga, Thrissur
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="details">
+
+        <div class="box">
+          <span class="icon">
+            <svg viewBox="0 0 24 24">
+              <rect x="3" y="5" width="18" height="16" rx="2"/>
+              <line x1="3" y1="9" x2="21" y2="9"/>
+            </svg>
+          </span>
+          <strong>Monday</strong>
+          20 April 2026<br>
+          (1201 Medam 7)
+        </div>
+
+        <div class="box">
+          <span class="icon">
+            <svg viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="9"/>
+              <line x1="12" y1="12" x2="12" y2="7"/>
+              <line x1="12" y1="12" x2="16" y2="12"/>
+            </svg>
+          </span>
+          <strong>Muhurtham <p>Between</p></strong>
+          10:00 AM & 11:00 AM
+        </div>
+
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="venue center">
+        <h3>
+          <span class="icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 21s7-6.2 7-11a7 7 0 0 0-14 0c0 4.8 7 11 7 11z"/>
+              <circle cx="12" cy="10" r="2.5"/>
+            </svg>
+          </span>
+         <a href="https://maps.app.goo.gl/7LQRf1inXKf32GKW7">M D Convention Centre</a> 
+        </h3>
+        <p>Konathukunnu (P.O), Thrissur</p>
+      </div>
+
+      <div class="sweek center">
+        Sweekaranam at 9:30 AM
+      </div>
+
+      <div class="divider"></div>
+
+     
+      <div class="reception center">
+        <h4>Reception</h4>
+        <p>
+          On Wednesday, 22nd April 2026<br>
+          From 5:00 PM to 9:00 PM<br>
+          Venue : <a href="https://maps.app.goo.gl/jXTv6hyd6stbjUhb8">Sri Mulam Club</a><br>
+          Vazhuthacaud, Thiruvananthapuram
+        </p>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="footer center">
+        Sharing the happiness:<br>
+        Anoop J, Chandni C.N, Aayushi & Aarush
+      </div>
+
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
